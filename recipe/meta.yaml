@@ -1,7 +1,7 @@
 {% set name = "thrift_sasl" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 {% set hashtype = "sha256" %}
-{% set hash = "dabbca1868731b95713704c97f15b26c4e069af698e40fd99f09d3c6659dfda7" %}
+{% set hash = "80e015290e7c9afc5b4864bfb964e841d4d98e1d70f74bc216cf269f243f3362" %}
 
 package:
   name: {{ name }}
@@ -23,9 +23,9 @@ requirements:
 
   run:
     - python
-    - thrift  # [py2k]
-    - thriftpy  # [py3k]
-    - pure-sasl
+    - thrift >=0.10
+    - pure-sasl  # [not linux]
+    - sasl  # [linux] 
 
 test:
   imports:
@@ -45,3 +45,4 @@ extra:
   recipe-maintainers:
     - mariusvniekerk
     - ericdill
+    - wesm
