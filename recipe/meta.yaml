@@ -24,8 +24,8 @@ requirements:
   run:
     - python
     - thrift >=0.10
-    - pure-sasl  # [win]
-    - sasl  # [not win] 
+    - pure-sasl  # [not linux]
+    - sasl  # [linux] 
 
 test:
   imports:
