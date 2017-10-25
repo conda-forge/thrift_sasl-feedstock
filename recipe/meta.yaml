@@ -13,19 +13,20 @@ source:
   {{ hashtype }}: {{ hash }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
   build:
     - python
     - setuptools
+    - toolchain
 
   run:
     - python
     - thrift >=0.10
-    - pure-sasl  # [not linux]
-    - sasl  # [linux] 
+    - pure-sasl  # [win]
+    - sasl  # [not win]
 
 test:
   imports:
