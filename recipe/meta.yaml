@@ -1,6 +1,5 @@
 {% set name = "thrift_sasl" %}
 {% set version = "0.3.0" %}
-{% set hashtype = "sha256" %}
 {% set hash = "80e015290e7c9afc5b4864bfb964e841d4d98e1d70f74bc216cf269f243f3362" %}
 
 package:
@@ -10,18 +9,18 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  {{ hashtype }}: {{ hash }}
+  sha256 {{ hash }}
 
 build:
   number: 1001
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
-    - setuptools
-    - toolchain
-
+    - pip
   run:
     - python
     - thrift >=0.10
