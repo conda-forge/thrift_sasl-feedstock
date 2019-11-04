@@ -33,13 +33,12 @@ test:
 
 about:
   home: https://github.com/cloudera/thrift_sasl
-  license: Apache 2.0
+  license: Apache-2.0
+  license_file: LICENSE
   summary: Thrift SASL module that implements TSaslClientTransport
   license_family: Apache
   dev_url: https://github.com/cloudera/thrift_sasl
   doc_url: https://github.com/cloudera/thrift_sasl
-  # https://github.com/cloudera/thrift_sasl/pull/7
-  # license_file: LICENSE
 
 extra:
   recipe-maintainers:
