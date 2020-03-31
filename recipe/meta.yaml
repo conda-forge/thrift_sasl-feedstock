@@ -1,6 +1,6 @@
 {% set name = "thrift_sasl" %}
-{% set version = "0.3.0" %}
-{% set hash = "80e015290e7c9afc5b4864bfb964e841d4d98e1d70f74bc216cf269f243f3362" %}
+{% set version = "0.4.2" %}
+{% set hash = "6a1c54731cb3ce61bdc041d9dc36e21f0f56db0163bb7b57be84de3fda70922f" %}
 
 package:
   name: {{ name }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ hash }}
 
 build:
-  number: 1002
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
