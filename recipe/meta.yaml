@@ -1,6 +1,6 @@
 {% set name = "thrift_sasl" %}
-{% set version = "0.4.2" %}
-{% set hash = "6a1c54731cb3ce61bdc041d9dc36e21f0f56db0163bb7b57be84de3fda70922f" %}
+{% set version = "0.4.3" %}
+{% set hash = "5bdd5b760d90a13d9b3abfce873db0425861aa8d6bf25912d3cc0467a4f773da" %}
 
 package:
   name: {{ name }}
