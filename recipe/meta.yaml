@@ -18,11 +18,12 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
     - thrift >=0.13
+    - thrift >=0.10
     - pure-sasl >=0.6.2
     - six >=1.13.0
 
