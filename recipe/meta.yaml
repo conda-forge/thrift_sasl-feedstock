@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 2
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - thrift >=0.13
+    - thrift >=0.10.0
     - pure-sasl >=0.6.2
     - six >=1.13.0
 
